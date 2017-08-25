@@ -1,3 +1,4 @@
+var assert = require('assert')
 var M = module.exports = {}
 
 M.sum = function (a) {
@@ -8,4 +9,10 @@ M.sum = function (a) {
   return s
 }
 
-console.log('M.sum=' + M.sum([1, 2, 3]))
+M.add = function (a, b) {
+  var c = []
+  for (var i = 0; i < a.length; i++) {
+    c.push(a[i] + b[i])
+  }
+  return c
+}
